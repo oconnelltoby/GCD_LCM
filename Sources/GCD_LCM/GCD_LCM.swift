@@ -1,9 +1,21 @@
 import C_GCD_LCM
 
-func gcd(_ a: Int32, _ b: Int32) -> Int32 {
-    C_GCD_LCM.gcd(a, b)
+func gcd(_ first: Int32, _ others: Int32...) -> Int32 {
+    gcd(first, others)
 }
 
-func lcm(_ a: Int32, _ b: Int32) -> Int32 {
-    C_GCD_LCM.lcm(a, b)
+func gcd(_ first: Int32, _ others: [Int32]) -> Int32 {
+    others.reduce(first) { runningGCD, value in
+        gcd(runningGCD, value)
+    }
+}
+
+func lcm(_ first: Int32, _ others: Int32...) -> Int32 {
+    lcm(first, others)
+}
+
+func lcm(_ first: Int32, _ others: [Int32]) -> Int32 {
+    others.reduce(first) { runningLCM, value in
+        lcm(runningLCM, value)
+    }
 }
