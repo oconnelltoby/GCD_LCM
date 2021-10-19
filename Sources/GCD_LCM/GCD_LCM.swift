@@ -1,9 +1,9 @@
 import C_GCD_LCM
 
-func gcd(a: Int32, b: Int32) -> Int32 {
+func gcd(_ a: Int32, _ b: Int32) -> Int32 {
     C_GCD_LCM.gcd(a, b)
 }
 
-func lcm(a: Int32, b: Int32) -> Int32 {
+func lcm(_ a: Int32, _ b: Int32) -> Int32 {
     C_GCD_LCM.lcm(a, b)
 }
