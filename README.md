@@ -1,3 +1,3 @@
 # GCD_LCM
 
-A description of this package.
+Bridges gcd and lcm functions from the C++ Numerics library to Swift

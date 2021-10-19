@@ -1,6 +1,9 @@
-public struct GCD_LCM {
-    public private(set) var text = "Hello, World!"
+import C_GCD_LCM
 
-    public init() {
-    }
+func gcd(a: Int32, b: Int32) -> Int32 {
+    C_GCD_LCM.gcd(a, b)
+}
+
+func lcm(a: Int32, b: Int32) -> Int32 {
+    C_GCD_LCM.lcm(a, b)
 }
